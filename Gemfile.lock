@@ -91,16 +91,6 @@ GEM
     browser (0.1.5)
     builder (3.0.4)
     bumbler (0.1.4)
-    capybara (2.0.2)
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      selenium-webdriver (~> 2.0)
-      xpath (~> 1.0.0)
-    capybara-webkit (0.14.1)
-      capybara (~> 2.0, >= 2.0.2)
-      json
     carmen (1.0.0.beta2)
     carmen-rails (1.0.0.beta3)
       carmen (~> 1.0.0.beta2)
@@ -296,7 +286,6 @@ GEM
     rubyzip (0.9.9)
     sanitize (2.0.3)
       nokogiri (>= 1.4.4, < 1.6)
-      nokogiri (>= 1.4.4, < 1.6)
     sass (3.2.5)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -360,8 +349,6 @@ GEM
     websocket (1.0.7)
     will_paginate (3.0.4)
     xml-simple (1.1.2)
-    xpath (1.0.0)
-      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -377,8 +364,6 @@ DEPENDENCIES
   bootstrap-wysihtml5-rails!
   browser
   bumbler
-  capybara (>= 2.0.2)
-  capybara-webkit
   carmen-rails
   dalli
   devise
@@ -436,3 +421,6 @@ DEPENDENCIES
   unicorn
   whiplash!
   will_paginate
+
+BUNDLED WITH
+   1.11.2
