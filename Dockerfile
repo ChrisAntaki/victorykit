@@ -37,4 +37,4 @@ RUN bundle
 
 # Start
 WORKDIR /app/source
-CMD ["bash", "rails s"]
+CMD ["rails", "s"]

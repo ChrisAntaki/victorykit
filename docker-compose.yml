@@ -1,11 +1,20 @@
 version: '2'
 services:
   web:
-    build: .
+    command: rails s
     depends_on:
       - pg
-      - redis
+    image: vk1
+    links:
+      - pg:postgres
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app/source
   pg:
     image: postgres
-  redis:
-    image: redis
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+  # redis:
+  #   image: redis
