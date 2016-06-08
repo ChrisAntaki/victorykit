@@ -25,15 +25,15 @@ RUN apt-get install libqt5webkit5-dev -y
 RUN apt-get install qt5-default -y
 RUN apt-get install qtdeclarative5-dev -y
 
-# # Node.js
-# RUN apt-get install npm -y
-# RUN npm install -g n
-# RUN n latest
-
 # Bundle
 COPY install/Gemfile /app/Gemfile
 WORKDIR /app/
 RUN bundle
+
+# Node.js
+RUN apt-get install npm -y
+RUN npm install -g n
+RUN n latest
 
 # Start
 WORKDIR /app/source
