@@ -1,11 +1,16 @@
 FROM ubuntu:latest
 
-# Install Ruby 2.0.0
+# Ruby
 RUN apt-get update -y
 RUN apt-get install curl -y
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 RUN curl -sSL https://get.rvm.io | bash -s stable --ruby=2.0.0
 ENV PATH /usr/local/rvm/gems/ruby-2.0.0-p648/bin:/usr/local/rvm/gems/ruby-2.0.0-p648@global/bin:/usr/local/rvm/rubies/ruby-2.0.0-p648/bin:/usr/local/rvm/bin:$PATH
+
+# Node.js
+RUN apt-get install npm -y
+RUN npm install -g n
+RUN n latest
 
 # Gems
 RUN gem update --system
@@ -30,10 +35,6 @@ COPY install/Gemfile /app/Gemfile
 WORKDIR /app/
 RUN bundle
 
-# Node.js
-RUN apt-get install npm -y
-RUN npm install -g n
-RUN n latest
-
 # Start
 WORKDIR /app/source
+CMD ["bash", "rails s"]

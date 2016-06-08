@@ -1,30 +1,31 @@
-redis:
-  uri: http://localhost:6379/
-aws:
-  access_key_id: OVERRIDE_ME
-  secret_access_key: OVERRIDE_ME
-hasher:
-  secret_key: OVERRIDE_ME
-google_analytics:
-  analytics_id: UA-31572927-1
-email:
-  from_address: Melanie Jones <info@watchdog.net>
-  domain: watchdog.net
-action_kit:
-   host: <%= ENV["AK_IMPORT_DB_HOST"] %>
-   username: <%= ENV["AK_IMPORT_DB_UNAME"] %>
-   password: <%= ENV["AK_IMPORT_DB_PWD"] %>
-   database: <%= ENV["AK_IMPORT_DB"] %>
-cloudmailin:
-  token: <%= ENV["CLOUDMAILIN_TOKEN"] %>
-organization:
-  name: "Demand Progress"
-  email: "info@demandprogress.org"
-  unsubscribe_url: "https://act.demandprogress.org/unsubscribe/unsubscribe?source=watchdog"
-  logo: 'logo.png'
-site:
-  name: "Watchdog.net"
-  email: "support@watchdog.net"
-  hostname: "act.watchdog.net"
-  feedback_email: info+watchdog@demandprogress.org
-  list_unsubscribe: "unsubscribe@appmail.watchdog.net"
+development:
+  redis:
+    uri: http://localhost:6379/
+  aws:
+    access_key_id: OVERRIDE_ME
+    secret_access_key: OVERRIDE_ME
+  hasher:
+    secret_key: OVERRIDE_ME
+  google_analytics:
+    analytics_id: UA-31572927-1
+  email:
+    from_address: Melanie Jones <info@watchdog.net>
+    domain: watchdog.net
+  action_kit:
+     host: <%= ENV["AK_IMPORT_DB_HOST"] %>
+     username: <%= ENV["AK_IMPORT_DB_UNAME"] %>
+     password: <%= ENV["AK_IMPORT_DB_PWD"] %>
+     database: <%= ENV["AK_IMPORT_DB"] %>
+  cloudmailin:
+    token: <%= ENV["CLOUDMAILIN_TOKEN"] %>
+  organization:
+    name: "Demand Progress"
+    email: "info@demandprogress.org"
+    unsubscribe_url: "https://act.demandprogress.org/unsubscribe/unsubscribe?source=watchdog"
+    logo: 'logo.png'
+  site:
+    name: "Watchdog.net"
+    email: "support@watchdog.net"
+    hostname: "act.watchdog.net"
+    feedback_email: info+watchdog@demandprogress.org
+    list_unsubscribe: "unsubscribe@appmail.watchdog.net"
