@@ -73,8 +73,8 @@ end
 
 # Host Based Access
 default[:postgresql][:hba] = [
-  { :method => 'md5', :address => '127.0.0.1/32' },
-  { :method => 'md5', :address => '::1/128' }
+  { :method => 'sha256', :address => '127.0.0.1/32' },
+  { :method => 'sha256', :address => '::1/128' }
 ]
 
 # Replication/Hot Standby (set to postgresql defaults)
